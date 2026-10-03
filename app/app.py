@@ -12,7 +12,7 @@ def home():
         </head>
         <body>
             <h1>Hello from DevOps! 🚀</h1>
-            <p>Version: 1.0</p>
+            <p>Version: 2.0</p>
             <p>Environment: Development</p>
         </body>
     </html>
