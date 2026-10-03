@@ -33,6 +33,11 @@ jobs:
       - name: Verify Flask installation
         run: python -c "import flask; print('Flask installed successfully')"
 
+
+      - name: Run unit tests
+        run: python -m unittest discover -s app -p "test_*.py" -v
+
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
