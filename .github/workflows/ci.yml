@@ -60,3 +60,7 @@ jobs:
           context: .
           push: true
           tags: devopsdemoacr509116.azurecr.io/devops-demo:latest
+      - name: Validate Kubernetes YAML
+        run: |
+          python -m pip install PyYAML
+          python -c "import yaml; yaml.safe_load_all(open('k8s/deployment.yaml', encoding='utf-8')); yaml.safe_load_all(open('k8s/service.yaml', encoding='utf-8')); print('Kubernetes YAML syntax is valid')"
